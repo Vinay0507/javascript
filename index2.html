@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript project</title>
+</head>
+<body style="background-color: yellowgreen;">
+   
+    <center>
+    <h1>Here is our javascript demo</h1>
+    <h1>voter eligible or not</h1>
+    <form>
+            <label>FullName:</label>
+            <input id="name" type="text" placeholder="Fullname"><br><br>
+            <label>Presentage:</label>
+            <input id="age" type="number" placeholder="age"><br><br>
+            <button onclick="voterage()">Submit</button>
+    </form>
+
+    <div class="display">
+        <div class="result">
+          <h3> Result: </h3>
+          <h3 id="result"></h3>	
+        </div>
+    </div>
+    <h2>Here</h2>
+    <h2>is </h2>
+    <h2>our</h2>
+    <h2>project</h2>
+    </center>
+
+</body>
+<script>
+    function voterage() {
+        event.preventDefault();
+    var FullName=document.getElementById("name").value;
+    var age=document.getElementById("age").value;
+
+    if(age>18){
+        document.getElementById("result").innerHTML=FullName+ "is eligible to cast a vote";
+        console.log(FullName+"is eligible to cast a vote");
+    }
+    else{
+        document.getElementById("result").innerHTML=FullName+ "is not eligible to cast a vote";
+        console.log(FullName+"is not eligible to cast a vote");
+    }
+}
+</script>
+
+</html>
